@@ -1,0 +1,25 @@
+Define a Python class Vehicle with an instance variable name and a method start which prints a message. Then define two subclasses Car and Bicyles that override the start method to print "vroom!" and "pedal!" respectively....
+
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+    
+    def start(self):
+        print(self.name + " is starting")
+
+class Car(Vehicle):
+    def start(self):
+        print(self.name + " is starting with a vroom!")
+
+class Bicycle(Vehicle):
+    def start(self):
+        print(self.name + " is ready to pedal!")
+
+# Example usage
+vehicle = Vehicle("Generic Vehicle")
+car = Car("Toyota Camry")
+bicycle = Bicycle("Mountain Bike")
+
+vehicle.start()
+car.start()
+bicycle.start()
